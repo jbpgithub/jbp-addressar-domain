@@ -5,17 +5,27 @@ import java.io.Serializable;
  */
 public class Person implements Serializable {
 
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String dateOfBirth;
+    private String note;
+
+
+
     public Person() {
 
     }
 
-    public Person(final String firstName, final String lastName) {
+    public Person(final String firstName, final String lastName, final int id) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.id = id;
+        this.dateOfBirth = dateOfBirth;
+        this.note = note;
     }
 
-    private String firstName;
-    private String lastName;
+
 
     public String getFirstName() {
         return firstName;
@@ -35,5 +45,29 @@ public class Person implements Serializable {
 
     public String getFullName() {
         return this.firstName + this.lastName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 }
