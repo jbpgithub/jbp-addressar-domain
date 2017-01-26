@@ -5,7 +5,7 @@ import org.junit.Test;
 /**
  * Created by Silver on 22.1.2017..
  */
-public class UserTest {
+public class UserUnitTest {
     @Before
     public void setUp() throws Exception {
 
@@ -17,14 +17,21 @@ public class UserTest {
         User user = new User();
         user.setFirstName("Ivan");
         user.setLastName("Ivić");
-        user.setUsername();
+        user.setUsername("ivanivic");
         user.setPassword("123");
-        user.set
+        user.setRole(Role.ADMIN);
+
         if (!user.getPassword().equals("123")) {
             throw new IllegalStateException("kriva lozinka");
         }
-        if (!user.getUsername().equals("IvanIvić")) {
+        if (!user.getUsername().equals("ivanivic")) {
             throw new IllegalStateException("krivi korisnik");
+        }
+        if (!(user.getRole() == Role.ADMIN || user.getRole() == Role.NORMAL)) {
+            throw new IllegalStateException("korisnik nema ulogu");
+        }
+        if (!user.getFullName().equals("IvanIvić")) {
+            throw new IllegalStateException("To nije taj user");
         }
     }
 
