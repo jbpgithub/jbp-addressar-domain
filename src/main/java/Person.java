@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,36 +10,32 @@ public class Person implements Serializable {
     private int id;
     private String firstName;
     private String lastName;
-    private List contactNumbers;
+    private PhoneNumber phoneNumber;
     private Address address;
-    //private String dateOfBirth;
     private String note;
-
+    private List phoneList;
 
 
     public Person() {
 
     }
 
-    public Person(final int id, final String firstName, final String lastName, final String note, final Address address) {
+    public Person(int id, String firstName, String lastName, List phonelist, Address address, String note) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.note = note;
+        this.phoneList = phonelist;
         this.address = address;
-    }
-
-/*
-    public Person(final String firstName, final String lastName, final int id, final String note) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.id = id;
-        //this.dateOfBirth = dateOfBirth;
         this.note = note;
     }
-*/
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(final int id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -56,24 +53,12 @@ public class Person implements Serializable {
         this.lastName = lastName;
     }
 
-    public String getFullName() {
-        return this.firstName + this.lastName;
+    public PhoneNumber getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(final int id) {
-        this.id = id;
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(final String note) {
-        this.note = note;
+    public void setPhoneNumber(final PhoneNumber phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public Address getAddress() {
@@ -84,11 +69,28 @@ public class Person implements Serializable {
         this.address = address;
     }
 
-    /*public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public String getNote() {
+        return note;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }*/
+    public void setNote(final String note) {
+        this.note = note;
+    }
+
+    public List getPhoneList() {
+        return phoneList;
+    }
+
+    public void setPhoneList(final List phoneList) {
+        this.phoneList = phoneList;
+    }
+
+    public String getFullName() {
+        return this.firstName + this.lastName;
+    }
+
+    public String getFullPerson() {
+        return this.id + this.firstName + this.lastName + this.address.getAddress() + this.note + this.phoneList;
+    }
+
 }

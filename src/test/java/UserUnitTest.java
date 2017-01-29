@@ -25,13 +25,13 @@ public class UserUnitTest {
             throw new IllegalStateException("kriva lozinka");
         }
         if (!user.getUsername().equals("ivanivic")) {
-            throw new IllegalStateException("krivi korisnik");
+            throw new IllegalStateException("krivo korisničko ime");
         }
         if (!(user.getRole() == Role.ADMIN || user.getRole() == Role.NORMAL)) {
             throw new IllegalStateException("korisnik nema ulogu");
         }
         if (!user.getFullName().equals("IvanIvić")) {
-            throw new IllegalStateException("To nije taj user");
+            throw new IllegalStateException("Pogrešno ime i prezime");
         }
     }
 

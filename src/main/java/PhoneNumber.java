@@ -32,7 +32,25 @@ public class PhoneNumber implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
-    public String makePhoneNumber (){
+    public String getFullPhoneNumber (){
         return this.typeOfPhoneNumber + ": " + this.phoneNumber;
+    }
+
+    public String makeTelephoneNumber (){
+        return this.typeOfPhoneNumber.TELEPHONE_NUMBER + ": " + this.phoneNumber;
+    }
+
+    public String makeFaxNumber (){
+        return this.typeOfPhoneNumber.FAX_NUMBER + ": " + this.phoneNumber;
+    }
+
+    public String makeMobileNumber (){
+        return this.typeOfPhoneNumber.MOBILE_NUMBER + ": " + this.phoneNumber;
+    }
+
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(typeOfPhoneNumber).append(phoneNumber);
+        return stringBuilder.toString();
     }
 }

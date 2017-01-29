@@ -7,7 +7,7 @@ public class Address implements Serializable {
 
     private String email;
     private String street;
-    private int streetNumber;
+    private String streetNumber;
     private String city;
     private int zipCode;
     private State state;
@@ -15,7 +15,7 @@ public class Address implements Serializable {
     public Address() {
     }
 
-    public Address(String email, String street, int streetNumber, String city, int zipCode, State state) {
+    public Address(String email, String street, String streetNumber, String city, int zipCode, State state) {
         this.email = email;
         this.street = street;
         this.streetNumber = streetNumber;
@@ -32,11 +32,11 @@ public class Address implements Serializable {
         this.street = street;
     }
 
-    public int getStreetNumber() {
+    public String getStreetNumber() {
         return streetNumber;
     }
 
-    public void setStreetNumber(final int streetNumber) {
+    public void setStreetNumber(final String streetNumber) {
         this.streetNumber = streetNumber;
     }
 
@@ -68,12 +68,16 @@ public class Address implements Serializable {
         return state;
     }
 
-/*    public void setState(State state) {
+    public void setState(final State state) {
         this.state = state;
-    }*/
+    }
 
+    public String getFullAddress() {
+        return this.street + " " + this.streetNumber + ", " + this.zipCode + " " + this.city;
+    }
 
-    public String setAddress() {
-        return this.email + "," + this.street + " " + this.streetNumber + "," + this.zipCode + " " + this.city;
+    public String getAddress() {
+        //return this.email + this.street + this.streetNumber + this.zipCode + this.city + this.state.getName() + this.state.getShortName();
+        return this.email + this.street + this.streetNumber + this.zipCode + this.city + this.state.getState();
     }
 }

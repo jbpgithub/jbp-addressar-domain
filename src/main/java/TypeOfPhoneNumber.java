@@ -1,6 +1,6 @@
 /**
- * Created by Silver on 26.1.2017..
+ * Created by Silver on 28.1.2017..
  */
 public enum TypeOfPhoneNumber {
-    PHONE_NUMBER, FAX_NUMBER, MOBILE_NUMBER
+    TELEPHONE_NUMBER, FAX_NUMBER, MOBILE_NUMBER;
 }

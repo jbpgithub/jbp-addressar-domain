@@ -15,16 +15,23 @@ public class AddressUnitTest {
 
     @Test
     public void setAddress() {
+        //State state = new State("Croatia", "HR");
+        State state = new State();
         Address address = new Address();
         address.setEmail("abc@abc.com");
         address.setStreet("Ulica");
-        address.setStreetNumber(1);
+        address.setStreetNumber("1a");
         address.setZipCode(10000);
         address.setCity("Zagreb");
+        address.setState(state);
+        address.getState().setName("Croatia");
+        address.getState().setShortName("HR");
 
-
-        if (!address.setAddress().equals("abc@abc.com,Ulica 1,10000 Zagreb")) {
+        if (!address.getAddress().equals("abc@abc.comUlica1a10000ZagrebHR Croatia")) {
             throw new IllegalStateException("Nije to ta adresa");
+        }
+        if (!address.getFullAddress().equals("Ulica 1a, 10000 Zagreb")) {
+            throw new IllegalStateException("Nije adresa za poštu");
         }
 
     }

@@ -38,7 +38,7 @@ public class User extends Person {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(final Role role) {
         this.role = role;
     }
 
