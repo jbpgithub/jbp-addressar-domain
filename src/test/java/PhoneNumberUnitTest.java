@@ -1,8 +1,8 @@
+import jbp.address.domain.PhoneNumber;
+import jbp.address.domain.TypeOfPhoneNumber;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Silver on 28.1.2017..

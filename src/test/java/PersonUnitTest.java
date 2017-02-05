@@ -1,3 +1,4 @@
+import jbp.address.domain.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +19,7 @@ public class PersonUnitTest {
 
    /* @Test
     public void testFullName() {
-        Person pero = new Person();
+        jbp.address.domain.Person pero = new jbp.address.domain.Person();
         pero.setFirstName("Pero");
         pero.setLastName("Perić");
         if (!pero.getFullName().equals("PeroPerić")) {

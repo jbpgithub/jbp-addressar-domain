@@ -1,8 +1,7 @@
+import jbp.address.domain.State;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Silver on 26.1.2017..

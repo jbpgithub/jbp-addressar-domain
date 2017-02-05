@@ -1,3 +1,5 @@
+import jbp.address.domain.Role;
+import jbp.address.domain.User;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

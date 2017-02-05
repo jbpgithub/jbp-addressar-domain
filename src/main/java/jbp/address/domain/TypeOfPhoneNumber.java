@@ -1,3 +1,5 @@
+package jbp.address.domain;
+
 /**
  * Created by Silver on 28.1.2017..
  */

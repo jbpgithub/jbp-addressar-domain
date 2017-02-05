@@ -1,4 +1,4 @@
-import java.io.Serializable;
+package jbp.address.domain;
 
 /**
  * Created by Silver on 22.1.2017..

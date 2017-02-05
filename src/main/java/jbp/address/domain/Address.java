@@ -1,3 +1,5 @@
+package jbp.address.domain;
+
 import java.io.Serializable;
 
 /**
