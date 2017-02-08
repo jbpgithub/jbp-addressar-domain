@@ -1,3 +1,5 @@
+package jbp.address.domain;
+
 import jbp.address.domain.PhoneNumber;
 import jbp.address.domain.TypeOfPhoneNumber;
 import org.junit.After;

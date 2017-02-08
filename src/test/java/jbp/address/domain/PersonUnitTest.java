@@ -1,3 +1,5 @@
+package jbp.address.domain;
+
 import jbp.address.domain.*;
 import org.junit.After;
 import org.junit.Before;

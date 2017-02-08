@@ -1,3 +1,5 @@
+package jbp.address.domain;
+
 import jbp.address.domain.Address;
 import jbp.address.domain.State;
 import org.junit.After;

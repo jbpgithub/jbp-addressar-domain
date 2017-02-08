@@ -1,3 +1,5 @@
+package jbp.address.domain;
+
 import jbp.address.domain.Role;
 import jbp.address.domain.User;
 import org.junit.After;
